@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Arimo 700.ttf</string>
+		<string>Arimo 700italic.ttf</string>
+		<string>Arimo italic.ttf</string>
+		<string>Arimo regular.ttf</string>
+		<string>Lato 100.ttf</string>
+		<string>Lato 100italic.ttf</string>
+		<string>Lato 300.ttf</string>
+		<string>Lato 700.ttf</string>
+		<string>Lato 700italic.ttf</string>
+		<string>Lato 900.ttf</string>
+		<string>Lato 900italic.ttf</string>
+		<string>Lato italic.ttf</string>
+		<string>Lato regular.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

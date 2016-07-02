@@ -62,8 +62,6 @@ class ODHomeView: ODBaseView {
     }
     
     private func animateLabels() {
-        
-        
         UIView.animateWithDuration(0.4, animations: { 
             self.greetingsLabel.alpha = 1
         })
@@ -90,4 +88,7 @@ class ODHomeView: ODBaseView {
         
         self.layoutIfNeeded()
     }
+    
+    //MARK: - Actions
+    
 }
