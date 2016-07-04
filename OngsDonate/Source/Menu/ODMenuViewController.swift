@@ -21,7 +21,7 @@ class ODMenuViewController : ODBaseViewController {
     
     
     @IBAction func close(sender: AnyObject) {
-        ODControlFlow.sharedInstance.mainNavigation?.popToRootViewControllerAnimated(true)
+        ODControlFlow.sharedInstance.mainNavigation?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

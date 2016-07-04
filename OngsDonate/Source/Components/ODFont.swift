@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension UIFont {
+    static func filledButtonFont() -> UIFont {
+        return UIFont(name: ODFontName.ArimoBold.rawValue, size: 14.0)!
+    }
+    
     static func titleFont() -> UIFont {
         return UIFont(name: ODFontName.LatoBlack.rawValue, size: 25.0)!
     }

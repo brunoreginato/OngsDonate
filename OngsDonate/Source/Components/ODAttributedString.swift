@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 extension NSAttributedString {
+    
+    static func redTitle(text: String) -> NSAttributedString {
+        let attr = [NSForegroundColorAttributeName: UIColor.ODRedColor(), NSFontAttributeName: UIFont.titleFont()]
+        return NSAttributedString(string: text, attributes: attr)
+    }
+    
     static func grayTitle(text: String) -> NSAttributedString {
         let attr = [NSForegroundColorAttributeName: UIColor.ODGrayColor(), NSFontAttributeName: UIFont.titleFont()]
         return NSAttributedString(string: text, attributes: attr)

@@ -45,6 +45,11 @@
 		FADC62501D28595300003DC7 /* ODMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC624F1D28595300003DC7 /* ODMenuViewController.swift */; };
 		FADC62521D28595C00003DC7 /* ODMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC62511D28595C00003DC7 /* ODMenuView.swift */; };
 		FADC62541D28597500003DC7 /* ODMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC62531D28597500003DC7 /* ODMenuItemCell.swift */; };
+		FADC62571D298D7100003DC7 /* ODShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC62561D298D7100003DC7 /* ODShareViewController.swift */; };
+		FADC62591D298D7C00003DC7 /* ODShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC62581D298D7C00003DC7 /* ODShareView.swift */; };
+		FADC625B1D29908800003DC7 /* ODLableRedBigTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC625A1D29908800003DC7 /* ODLableRedBigTitle.swift */; };
+		FADC625E1D29921700003DC7 /* ODFilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC625D1D29921700003DC7 /* ODFilledButton.swift */; };
+		FADC62601D2A779900003DC7 /* ODRedFilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC625F1D2A779900003DC7 /* ODRedFilledButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +107,11 @@
 		FADC624F1D28595300003DC7 /* ODMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODMenuViewController.swift; sourceTree = "<group>"; };
 		FADC62511D28595C00003DC7 /* ODMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODMenuView.swift; sourceTree = "<group>"; };
 		FADC62531D28597500003DC7 /* ODMenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODMenuItemCell.swift; sourceTree = "<group>"; };
+		FADC62561D298D7100003DC7 /* ODShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODShareViewController.swift; sourceTree = "<group>"; };
+		FADC62581D298D7C00003DC7 /* ODShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODShareView.swift; sourceTree = "<group>"; };
+		FADC625A1D29908800003DC7 /* ODLableRedBigTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODLableRedBigTitle.swift; sourceTree = "<group>"; };
+		FADC625D1D29921700003DC7 /* ODFilledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODFilledButton.swift; sourceTree = "<group>"; };
+		FADC625F1D2A779900003DC7 /* ODRedFilledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODRedFilledButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +203,7 @@
 		FA7E7E731D0C943200D80F68 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				FADC62551D298D5200003DC7 /* Share */,
 				FADC624E1D28594400003DC7 /* Menu */,
 				FA8027C51D281BB70000C4D4 /* Components */,
 				FA8027A51D2694980000C4D4 /* ControlFlow */,
@@ -270,6 +281,7 @@
 		FA8027C51D281BB70000C4D4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FADC625C1D2991F700003DC7 /* ODButton */,
 				FADC62471D28568F00003DC7 /* ODImageView */,
 				FA8027CC1D2828750000C4D4 /* ODLabel */,
 				FA8027C61D281BCF0000C4D4 /* ODFont.swift */,
@@ -286,6 +298,7 @@
 				FA8027CD1D2828960000C4D4 /* ODLabelWhiteBigTitle.swift */,
 				FA8027CF1D28312F0000C4D4 /* ODLabelWhiteSubtitle.swift */,
 				FADC624A1D28582000003DC7 /* ODLabelGrayBigTitle.swift */,
+				FADC625A1D29908800003DC7 /* ODLableRedBigTitle.swift */,
 			);
 			path = ODLabel;
 			sourceTree = "<group>";
@@ -306,6 +319,24 @@
 				FADC62531D28597500003DC7 /* ODMenuItemCell.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		FADC62551D298D5200003DC7 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				FADC62561D298D7100003DC7 /* ODShareViewController.swift */,
+				FADC62581D298D7C00003DC7 /* ODShareView.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		FADC625C1D2991F700003DC7 /* ODButton */ = {
+			isa = PBXGroup;
+			children = (
+				FADC625D1D29921700003DC7 /* ODFilledButton.swift */,
+				FADC625F1D2A779900003DC7 /* ODRedFilledButton.swift */,
+			);
+			path = ODButton;
 			sourceTree = "<group>";
 		};
 		FE6A70202CA848640E761922 /* Pods */ = {
@@ -487,15 +518,20 @@
 			files = (
 				FA7E7E851D0C9A6900D80F68 /* ODHomeViewController.swift in Sources */,
 				FA8027C91D281D6C0000C4D4 /* ODFontName.swift in Sources */,
+				FADC62591D298D7C00003DC7 /* ODShareView.swift in Sources */,
+				FADC625E1D29921700003DC7 /* ODFilledButton.swift in Sources */,
 				FA8027C71D281BCF0000C4D4 /* ODFont.swift in Sources */,
 				FA7E7E821D0C970800D80F68 /* ODBaseView.swift in Sources */,
 				FA7E7E871D0C9A9B00D80F68 /* ODHomeView.swift in Sources */,
 				FA8027CB1D281F080000C4D4 /* ODAttributedString.swift in Sources */,
 				FADC62501D28595300003DC7 /* ODMenuViewController.swift in Sources */,
+				FADC62571D298D7100003DC7 /* ODShareViewController.swift in Sources */,
 				FA8027D41D2836090000C4D4 /* ODControlFlow.swift in Sources */,
 				FA8027D61D28390E0000C4D4 /* ODTabBarViewController.swift in Sources */,
+				FADC62601D2A779900003DC7 /* ODRedFilledButton.swift in Sources */,
 				FADC624B1D28582000003DC7 /* ODLabelGrayBigTitle.swift in Sources */,
 				FADC62521D28595C00003DC7 /* ODMenuView.swift in Sources */,
+				FADC625B1D29908800003DC7 /* ODLableRedBigTitle.swift in Sources */,
 				FA8027CE1D2828960000C4D4 /* ODLabelWhiteBigTitle.swift in Sources */,
 				FADC624D1D28585800003DC7 /* ODColor.swift in Sources */,
 				FA8027D21D28352D0000C4D4 /* ODMainNavigationController.swift in Sources */,

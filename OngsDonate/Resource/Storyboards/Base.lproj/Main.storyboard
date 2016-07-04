@@ -92,7 +92,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="OngsDonate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -101,24 +101,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
                                 <rect key="frame" x="195" y="279" width="210" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
@@ -337,7 +329,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wGd-Ov-PAp"/>
                     <connections>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="tabBar" id="Mgo-Pf-C8b"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="tabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mgo-Pf-C8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3G-8m-BJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,35 +375,50 @@
         <!--Second-->
         <scene sceneID="Qui-Ny-y7L">
             <objects>
-                <viewController id="CDM-xk-tyG" customClass="SecondViewController" customModule="OngsDonate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CDM-xk-tyG" customClass="ODShareViewController" customModule="OngsDonate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xnl-sa-2kV"/>
                         <viewControllerLayoutGuide type="bottom" id="dZL-mN-3nD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xgg-E2-Rud">
+                    <view key="view" contentMode="scaleToFill" id="Xgg-E2-Rud" customClass="ODSharedView" customModule="OngsDonate" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DAr-bb-nPm">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVA-c4-PPb">
+                                <rect key="frame" x="20" y="40" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Ztt-Au-yic"/>
+                                    <constraint firstAttribute="width" constant="15" id="pKu-Sh-5yi"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="9pv-A4-QxB" eventType="touchUpInside" id="FWx-fJ-Fgi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DÊ UM SHARE EM SUAS REDES SOCIAIS!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRJ-pE-ub1" customClass="ODLabelRedBigTitle" customModule="OngsDonate" customModuleProvider="target">
+                                <rect key="frame" x="41" y="91" width="518" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWH-Mu-nD5">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld4-iE-sIH" customClass="ODRedFilledButton" customModule="OngsDonate" customModuleProvider="target">
+                                <rect key="frame" x="30" y="481" width="540" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cfQ-vb-yfk"/>
+                                </constraints>
+                                <state key="normal" title="SHARE"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LWH-Mu-nD5" firstAttribute="centerX" secondItem="DAr-bb-nPm" secondAttribute="centerX" id="3rt-5V-uuz"/>
-                            <constraint firstAttribute="centerY" secondItem="DAr-bb-nPm" secondAttribute="centerY" id="Dxn-Ab-c1p"/>
-                            <constraint firstItem="LWH-Mu-nD5" firstAttribute="top" secondItem="DAr-bb-nPm" secondAttribute="bottom" constant="8" symbolic="YES" id="itC-Lr-wrg"/>
-                            <constraint firstAttribute="centerX" secondItem="DAr-bb-nPm" secondAttribute="centerX" id="p0o-uD-kGW"/>
+                            <constraint firstItem="kRJ-pE-ub1" firstAttribute="top" secondItem="uVA-c4-PPb" secondAttribute="bottom" constant="36" id="CXu-C9-tIc"/>
+                            <constraint firstItem="dZL-mN-3nD" firstAttribute="top" secondItem="ld4-iE-sIH" secondAttribute="bottom" constant="20" id="ECO-Xn-5Gd"/>
+                            <constraint firstItem="kRJ-pE-ub1" firstAttribute="leading" secondItem="Xgg-E2-Rud" secondAttribute="leading" constant="41" id="FQc-s4-dv5"/>
+                            <constraint firstItem="ld4-iE-sIH" firstAttribute="leading" secondItem="Xgg-E2-Rud" secondAttribute="leading" constant="30" id="H84-dN-CSo"/>
+                            <constraint firstItem="uVA-c4-PPb" firstAttribute="top" secondItem="xnl-sa-2kV" secondAttribute="bottom" constant="20" id="Vv8-7B-baR"/>
+                            <constraint firstAttribute="trailing" secondItem="ld4-iE-sIH" secondAttribute="trailing" constant="30" id="dVN-gs-3Zk"/>
+                            <constraint firstAttribute="trailing" secondItem="kRJ-pE-ub1" secondAttribute="trailing" constant="41" id="twv-m3-Ixx"/>
+                            <constraint firstItem="uVA-c4-PPb" firstAttribute="leading" secondItem="Xgg-E2-Rud" secondAttribute="leading" constant="20" id="wfh-BJ-VOJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="YHM-AR-O98"/>
